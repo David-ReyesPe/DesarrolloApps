@@ -20,6 +20,20 @@ function mostrarLista() {
   lista.forEach(item => {
     const li = document.createElement("li");
     li.textContent = item;
+
+    const eliminarBtn = document.createElement("button");
+    eliminarBtn.textContent = "Eliminar";
+    eliminarBtn.onclick = () => eliminarElemento(item);
+
+    li.appendChild(eliminarBtn);
     listaUI.appendChild(li);
   });
+}
+
+
+function eliminarElemento(indice) {
+
+  lista.splice(indice, 1);
+  mostrarLista();
+  
 }
