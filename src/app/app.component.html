@@ -1,0 +1,39 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<h1 id="titulo">Manejo de DOM</h1>
+<div class="entrada-contenedor">
+  <input
+    type="text"
+    id="entrada"
+    [(ngModel)]="nombre"
+    placeholder="Escribe algo..."
+  />
+  <p>{{ nombre }}</p>
+  <input
+    type="text"
+    id="entrada"
+    [(ngModel)]="nuevaTarea"
+    placeholder="Escribe tarea..."
+  />
+  <button id="Boton" (click)="agregarObjecto()">Agregar</button>
+</div>
+<ul id="lista">
+  <li *ngFor="let tarea of tareas; let i = index">
+    {{ tarea }}
+    <button (click)="eliminarTarea(i)">Eliminar</button>
+  </li>
+</ul>
+
+<div class="suma-contenedor">
+  <input type="number" id="entrada" [(ngModel)]="numero1" placeholder="Número 1" />
+  <input type="number" id="entrada" [(ngModel)]="numero2" placeholder="Número 2" />
+  <p>La suma es: {{ suma }}</p>
+</div>
+<router-outlet />
