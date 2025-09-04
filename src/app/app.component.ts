@@ -19,6 +19,11 @@ export class AppComponent {
   numero1 = 0;
   numero2 = 0;
 
+  
+  get suma(): number {
+    return Number(this.numero1) + Number(this.numero2);
+  }
+
   agregarObjecto() {
     if (this.nuevaTarea.trim()) {
       this.tareas.push(this.nuevaTarea);
@@ -30,7 +35,4 @@ export class AppComponent {
     this.tareas.splice(indice, 1);
   }
 
-  get suma(): number {
-    return Number(this.numero1) + Number(this.numero2);
-  }
 }
