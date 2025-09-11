@@ -1,16 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-to-do',
   standalone: true,
-  imports: [RouterOutlet, FormsModule, CommonModule],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  imports: [ FormsModule, CommonModule],
+  templateUrl: './to-do.component.html',
+  styleUrl: './to-do.component.css',
 })
-export class AppComponent {
+export class ToDoComponent {
   title = 'clase2';
   nombre = '';
   nuevaTarea = '';
@@ -26,5 +25,4 @@ export class AppComponent {
   eliminarTarea(indice: number) {
     this.tareas.splice(indice, 1);
   }
-
 }

@@ -1,0 +1,23 @@
+<h1 id="titulo">Manejo de DOM</h1>
+<div class="entrada-contenedor">
+  <input
+    type="text"
+    id="entrada"
+    [(ngModel)]="nombre"
+    placeholder="Escribe algo..."
+  />
+  <p>{{ nombre }}</p>
+  <input
+    type="text"
+    id="entrada"
+    [(ngModel)]="nuevaTarea"
+    placeholder="Escribe tarea..."
+  />
+  <button id="Boton" (click)="agregarObjecto()">Agregar</button>
+</div>
+<ul id="lista">
+  <li *ngFor="let tarea of tareas; let i = index">
+    {{ tarea }}
+    <button (click)="eliminarTarea(i)">Eliminar</button>
+  </li>
+</ul>
